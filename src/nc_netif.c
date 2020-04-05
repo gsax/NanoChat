@@ -18,6 +18,8 @@ nc_netif_get_addrs(char *inet, char *broadcast)
       if((strncmp(ifa->ifa_name, "en0", 3) == 0) ||
 	 (strncmp(ifa->ifa_name, "en1", 4) == 0) ||
 	 (strncmp(ifa->ifa_name, "em0", 3) == 0) ||
+	 (strncmp(ifa->ifa_name, "enp", 3) == 0) ||
+	 (strncmp(ifa->ifa_name, "wlp", 3) == 0) ||
 	 (strncmp(ifa->ifa_name, "eth0", 4) == 0)) {
 	
 	strcpy(inet, inet_ntoa(sa->sin_addr));
